@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore Space</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background-color:#1f2833;
+      color: #fff;
+    }
+
+   
+    nav {
+      background-color: #1f2833;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px;
+      flex-wrap: wrap;
+    }
+
+    nav .logo {
+      font-size: 32px;
+      font-weight: bold;
+      color: #66fcf1;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+     
+    }
+
+    nav ul li a:hover {
+      color: #66fcf1;
+    }
+
+  
+    .hero {
+      background: url('./bg.avif') center/cover no-repeat;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      color: #fff;
+      background:black;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    
+    .section {
+      padding: 48px 32px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      color: #66fcf1;
+      margin-bottom: 32px;
+    }
+
+    .planets {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .planet-card {
+      background: #1f2833;
+      padding: 16px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    }
+
+    .planet-card h3 {
+      color: #45a29e;
+    }
+
+    .planet-card p {
+      font-size: 16px;
+    }
+
+   
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      margin-top: 32px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+ 
+    .contact {
+      background: #1f2833;
+      padding: 32px;
+      border-radius: 10px;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .contact input,
+    .contact textarea {
+      padding: 16px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .contact button {
+      background: #66fcf1;
+      color: #0b0c10;
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .contact button:hover {
+      background: #45a29e;
+    }
+
+  
+    footer {
+      background: #0b0c10;
+      text-align: center;
+      padding: 20px ;
+      margin-top: auto;
+      color: #aaa;
+    }
+
+    
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+      }
+
+      nav ul li {
+        text-align: center;
+        margin: 0.5rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Explore Space</div>
+    <ul>
+      <li><a href="#planets">Planets</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <h1>Discover the Wonders of the Universe</h1>
+  </header>
+
+  <section class="section" id="planets">
+    <h2>Planets of Our Solar System</h2>
+    <div class="planets">
+      <div class="planet-card">
+        <h3>Mercury</h3>
+        <p>Smallest planet, closest to the Sun.</p>
+      </div>
+      <div class="planet-card">
+        <h3>Venus</h3>
+        <p>Hottest planet with a thick, toxic atmosphere.</p>
+      </div>
+      <div class="planet-card">
+        <h3>Earth</h3>
+        <p>Our home planet with abundant water and life.</p>
+      </div>
+      <div class="planet-card">
+        <h3>Mars</h3>
+        <p>Known as the Red Planet with potential for future colonization.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="gallery">
+    <h2>Image Gallery</h2>
+    <div class="gallery">
+      <img src="glaxy.webp" alt="Space Image 1" />
+      <img src="milkyway.avif" alt="Galaxy" />
+      <img src="planet.avif" alt="Planet" />
+      <img src="nasa.avif" alt="NASA" />
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact">
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="4" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Explore Space | developed by Muskan Chaubey.
+  </footer>
+
+</body>
+</html>
